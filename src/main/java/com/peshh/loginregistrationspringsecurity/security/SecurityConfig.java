@@ -19,12 +19,12 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }
-    @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .authorizeRequests().antMatchers("/api/**", "/h2-console/**").permitAll()
-                .anyRequest().authenticated();
-        http.headers().frameOptions().disable();
-        return http.build();
-    }
+//    @Bean
+//    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//        http.csrf().disable()
+//                .authorizeRequests().dispatcherTypeMatchers("/api/**", "/h2-console/**").permitAll()
+//                .anyRequest().authenticated();
+//        http.headers().frameOptions().disable();
+//        return http.build();
+//    }
 }

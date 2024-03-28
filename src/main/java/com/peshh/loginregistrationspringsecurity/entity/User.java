@@ -3,6 +3,7 @@ package com.peshh.loginregistrationspringsecurity.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
@@ -13,6 +14,7 @@ import java.util.Set;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name="users")
 public class User {
     @Id
@@ -25,4 +27,6 @@ public class User {
     private String email;
     @Column(nullable = false)
     private String password;
+    @Column
+    private Role role;
 }
