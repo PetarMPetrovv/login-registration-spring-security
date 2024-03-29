@@ -24,8 +24,7 @@ public class UserDetail implements UserDetailsService {
             throw new UsernameNotFoundException("User not exists by Username");
         }
 
-        Set<GrantedAuthority> authorities = user.getRoles().stream()
-                .map((role) -> new SimpleGrantedAuthority(role.getName()))
+        Set<GrantedAuthority> authorities = user.getRole() = new SimpleGrantedAuthority(role.getName()))
                 .collect(Collectors.toSet());
         return new org.springframework.security.core.userdetails.User(username,user.getPassword(),authorities);
     }

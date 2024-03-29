@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
+import java.util.Arrays;
 import java.util.Set;
 
 @Entity
@@ -29,4 +30,8 @@ public class User {
     private String password;
     @Column
     private Role role;
+
+    public Role getRole() {
+
+    }
 }
