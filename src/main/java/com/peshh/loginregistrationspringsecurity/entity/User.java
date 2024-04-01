@@ -30,8 +30,4 @@ public class User {
     private String password;
     @Column
     private Role role;
-
-    public Role getRole() {
-
-    }
 }
